@@ -83,3 +83,49 @@ function filterEvenLengthWords(words) {
 
 var output = filterEvenLengthWords(['word', 'words', 'word', 'words']);
 console.log(output); // --> ['word', 'word']
+
+
+// greaterThanSecond
+
+// Print values that are greater than its 2nd value. Return how many values this is.
+
+function  greaterThanSecond(array){
+  let counter = 0;
+  for( let el of array ){
+    if(el > array[1]){
+      console.log(el);
+      counter++
+    }
+  }
+  return counter;
+}
+
+// greaterThanSecond
+
+// Write a function that accepts any array, and returns a new array with the array values that are greater than its 2nd value. Print how many values this is. What will you do if the array is only one element long?
+
+function greaterThanSecond(array){
+  if( array.length <= 1 ) return 'not enough numbers'
+  const result = [];
+  for( let el of array ){
+    if( el > array[1] ){
+      result.push(el);
+    }
+  }
+  console.log(result.length);
+  return result;
+}
+
+// countPositives
+
+// Given array of numbers, create function that counts the number of positive values in an array. Then replace last value of an array with number of positive values. Example, countPositives([-1,1,1,1]) changes array to [-1,1 ,1, 3] and returns it.
+
+function countPositives(array) {
+  let counter=0;
+for (let el of array) {
+    if(el > 0){
+        counter ++
+    }
+} let remove = array.splice (-1,1,counter)
+  return array
+}
